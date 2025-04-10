@@ -1,0 +1,21 @@
+.hero {
+  height: calc(100vh - 80px);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.hero-content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 16px;
+  color: white;
+}
+
+.hero-logo {
+  width: 200px;
+}

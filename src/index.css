@@ -1,0 +1,14 @@
+/* Deixa tudo ocupar a tela inteira */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove comportamento mobile em desktop */
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
