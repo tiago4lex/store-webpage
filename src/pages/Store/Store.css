@@ -85,3 +85,36 @@
 .filter-button.active {
     background-color: #111;
     color: white;
+}
+
+.product-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.buy-button {
+  background-color: #111; /* preto sólido */
+  color: #fff; /* texto branco */
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.buy-button:hover {
+  background-color: #fff;
+  color: #111;
+  border-color: #111;
+  transform: scale(1.05);
+}
+
+.buy-button:active {
+  transform: scale(0.95);
+}

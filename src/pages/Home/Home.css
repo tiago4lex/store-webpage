@@ -1,0 +1,13 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100%
+}
+
+.home > * {
+  flex-shrink: 0; /* header e footer não encolhem */
+}
+
+.home > main {
+  flex-grow: 1; /* conteúdo central cresce */
+}

@@ -1,12 +1,11 @@
 .hero {
-  height: calc(100vh - 80px);
-  background-size: cover;
-  background-position: center;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  background: url('/path/to/image.jpg') no-repeat center center/cover;
 }
+
 
 .hero-content {
   text-align: center;

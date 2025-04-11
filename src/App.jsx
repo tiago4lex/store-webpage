@@ -1,16 +1,18 @@
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Hero from "./components/Hero/Hero";
-
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Store from "./pages/Store/Store";
+import Layout from "./layouts/Layout";
 
 function App() {
   return (
-    <div className="app-container">
-      <Header />
-      <Hero />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/store" element={<Store />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
