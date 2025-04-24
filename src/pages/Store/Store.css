@@ -118,3 +118,13 @@
 .buy-button:active {
   transform: scale(0.95);
 }
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-link h3,
+.product-link p {
+  margin: 0;
+}

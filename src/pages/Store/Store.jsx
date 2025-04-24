@@ -4,51 +4,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./Store.css";
 import { FaShoppingCart } from "react-icons/fa";
 
-import brazaside from "../../assets/brazaside-shirt.jpeg";
-import smokey from "../../assets/djsmokey-shirt.jpeg";
-import cassete from "../../assets/bvndit-cassete.jpeg";
-import vinyl from "../../assets/bvndit-vinyl.jpeg";
-
-const products = [
-  {
-    id: 1,
-    name: "BrazaSide Clan Shirt",
-    price: "R$ 79,90",
-    img: brazaside,
-    type: "shirt",
-    color: "black",
-  },
-  {
-    id: 2,
-    name: "DJ Smokey Shirt",
-    price: "R$ 99,90",
-    img: smokey,
-    type: "shirt",
-    color: "black",
-  },
-  {
-    id: 3,
-    name: "Most Wanted Cassete",
-    price: "R$ 149,90",
-    img: cassete,
-    type: "cassete",
-  },
-  {
-    id: 4,
-    name: "Scratch Mix Vinyl",
-    price: "R$ 199,90",
-    img: vinyl,
-    type: "vinyl",
-  }
-];
+import products from "../../data/products";
+import { Link } from "react-router-dom";
 
 function Store() {
-    const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState("all");
 
-    const categories = ["all", "shirt", "cassete", "vinyl"];
+  const categories = ["all", "shirt", "cassete", "vinyl"];
 
-    const filteredProducts = 
-        filter === "all" ? products : products.filter((p) => p.type === filter);
+  const filteredProducts =
+    filter === "all" ? products : products.filter((p) => p.type === filter);
 
   return (
     <div className="store-container">
@@ -80,13 +45,15 @@ function Store() {
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.3 }}
               >
-                <img
-                  src={product.img}
-                  alt={`Imagem do produto ${product.name}`}
-                  className="product-img"
-                />
-                <h3>{product.name}</h3>
-                <p>{product.price}</p>
+                <Link to={`/product/${product.id}`} className="product-link">
+                  <img
+                    src={product.img}
+                    alt={`Imagem do produto ${product.name}`}
+                    className="product-img"
+                  />
+                  <h3>{product.name}</h3>
+                  <p>{product.price}</p>
+                </Link>
                 <button className="buy-button">
                   <FaShoppingCart style={{ marginRight: "8px" }} />
                   BUY
